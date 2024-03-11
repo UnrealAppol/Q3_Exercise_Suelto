@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var a = prompt("This program will identify if the lengths of the sides of the triangle that the user inputs is either an equilateral, isoceles or scalene triangle. Input your first value: ");
+        while(isNaN(a) == true)
+        {
+            var a = prompt("Input your actual first value: ");
+        }
+        var b = prompt("Input your second value: ");
+        while(isNaN(b) == true)
+        {
+            var b = prompt("Input your actual second value: ");
+        }
+        var c = prompt("Input your third value: ");
+        while(isNaN(c) == true)
+        {
+            var c = prompt("Input your actual third value: ");
+        }
+
+
+        function determineTriangle(a,b,c)
+        {
+            if(a === b && b ===c)
+            {
+                return window.alert("The triangle is Equilateral");
+            }
+            else if(a === b && b != c)
+            {
+                return window.alert("The triangle is Isoceles");
+            }
+            else if(a != b && b === c)
+            {
+                return window.alert("The triangle is Isoceles");
+            }
+            else if(a === c && b != c)
+            {
+                return window.alert("The triangle is Isoceles");
+            }
+            else
+            {
+                return window.alert("The triangle is Scalene");
+            }
+        }
+
+    determineTriangle(a, b, c);
+    </script>
+</body>
+</html>
